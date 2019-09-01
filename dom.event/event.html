@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style>
+        .container {
+          position: relative;
+          width: 400px;
+          height: 600px;
+        }
+        .container .inner {
+          width: 400px;
+          height: 600px;
+        }
+        .container .inner .block {
+          width: 400px;
+          height: 200px;
+          background: #fff;
+          border: 1px solid #000;
+        }
+        .container .float {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+  </head>
+  <head>
+
+      <div class="container">
+          <div class="float" id="float"></div>
+          <div class="inner">
+            <div class="block">block1</div>
+            <div class="block">block2</div>
+            <div class="block">
+              <button id="btn">我是按钮</button>
+            </div>
+         </div>
+         
+       </div>
+
+    <script type="text/javascript">
+      const btn = document.getElementById('btn');
+      const float = document.getElementById('float');
+      btn.addEventListener('click', ()=>{
+        console.log('click btn!');
+      });
+      float.addEventListener('click', ()=>{
+        console.log('click float layer!');
+      });
+    </script>
+    
+  </head>
+</html>
